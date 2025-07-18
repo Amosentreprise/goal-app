@@ -1,0 +1,110 @@
+/* styles.css */
+
+:root {
+    --bg: #e0e5ec;
+    --card-bg: #e0e5ec;
+    --text: #333;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a3b1c6;
+    --primary: #5b8def;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 2rem;
+  }
+  
+  .container {
+    max-width: 600px;
+    width: 100%;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px var(--shadow-dark),
+                -10px -10px 20px var(--shadow-light);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+  
+  .card {
+    background: var(--card-bg);
+    box-shadow: inset 5px 5px 10px var(--shadow-dark),
+                inset -5px -5px 10px var(--shadow-light);
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 1rem;
+    box-shadow: inset 2px 2px 5px var(--shadow-dark),
+                inset -2px -2px 5px var(--shadow-light);
+    background: var(--card-bg);
+    color: var(--text);
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #4a76d4;
+  }
+  
+  #notification {
+    margin-top: 1rem;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 1.2rem;
+    }
+  
+    textarea {
+      min-height: 60px;
+    }
+  }
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche Hebdomadaire</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('✅ Service Worker enregistré'))
+          .catch(err => console.log('❌ Échec Service Worker:', err));
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🗓️ Ma Fiche Hebdomadaire</h1>
+
+    <form id="weeklyForm">
+      <div class="card">
+        <label>Fondation :</label>
+        <textarea name="fondation" placeholder="Tâches ou objectifs..." required></textarea>
+      </div>
+
+      <div class="card">
+        <label>Formation Cybersécurité :</label>
+        <textarea name="formation" placeholder="Modules à suivre, exercices..." required></textarea>
+      </div>
+
+      <div class="card">
+        <label>Mentorat :</label>
+        <textarea name="mentorat" placeholder="Encadrement prévu..." required></textarea>
+      </div>
+
+      <div class="card">
+        <label>Développement personnel :</label>
+        <textarea name="developpement" placeholder="Lecture, français, etc." required></textarea>
+      </div>
+
+      <div class="card">
+        <label>Activité génératrice de revenu :</label>
+        <textarea name="activite" placeholder="Idée, plan, action..." required></textarea>
+      </div>
+
+      <button type="submit">💾 Sauvegarder</button>
+    </form>
+
+    <div id="notification"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
