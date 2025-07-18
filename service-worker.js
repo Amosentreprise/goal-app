@@ -4,8 +4,8 @@ const ASSETS_TO_CACHE = [
   "styles.css",
   "app.js",
   "manifest.json",
-  "icons/icon-192.svg",
-  "icons/icon-512.svg"
+  "icons/icon-192.png",
+  "icons/icon-512.png"
 ];
 
 // 📦 Installation : mise en cache des fichiers essentiels
